@@ -9,3 +9,4 @@ By selecting different branches you can get the sample code that you should have
 | main | Artifactory | Artifactory configuration files  |
 | jenkins_controller | CI/CD 2 | Jenkins controller docker and configuration file  |
 | jenkins_agent      | CI/CD 3 | Jenkins agent docker and configuration file |
+| final              | CI/CD 4 | Full docker-compose based environment configuration |
