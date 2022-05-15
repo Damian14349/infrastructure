@@ -9,7 +9,7 @@ jenkins:
       permissions:
         - "Overall/Administer:panda"
   numExecutors: 0
-    nodes:
+  nodes:
   - permanent:
       labelString: "agent"
       launcher:
@@ -65,6 +65,12 @@ credentials:
                 o1epS4clbUspxKat9tbIIRccKa9GWXVDNLih8TslLCBoL/knJc+aqw==
                 -----END RSA PRIVATE KEY-----
           scope: GLOBAL
+# Best practice is to use seed job + dynamic reload instead of direct definition
+jobs:
+  - file: /usr/share/jenkins/ref/jobs/backend.groovy
+  - file: /usr/share/jenkins/ref/jobs/frontend.groovy
+  - file: /usr/share/jenkins/ref/jobs/apps_of_apps.groovy
+
 tool:
   sonarRunnerInstallation:
     installations:
