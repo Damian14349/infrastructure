@@ -47,7 +47,7 @@ services:
   sonarqube:
     depends_on:
       - jenkins
-    image: sonarqube
+    image: sonarqube:9.2.4-community
     container_name: sonarqube
     ports:
       - "9000:9000"
